@@ -1,8 +1,23 @@
-const Navbar = () => {
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import { isUrl } from "check-valid-url";
 
+const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch()
+    }
     const navLinks = <>
-        <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
+        <li><NavLink to={"/"}>Home</NavLink></li>
+        {
+            user
+                ? <li><NavLink to={"/update-profile"}>Update Profile</NavLink></li>
+                : <></>
+        }
     </>
 
 
@@ -17,7 +32,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <Link to={"/"} className="btn btn-ghost text-xl">daisyUI</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -25,7 +40,17 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                {
+                    user
+                        ? <div>
+                            <div className="tooltip tooltip-bottom mr-4" data-tip={user.displayName}>
+                                <img src={isUrl(user?.photoURL) ? user?.photoURL : "https://i.ibb.co/XDrnjqc/image.png"} className="btn rounded-box"></img>
+                            </div>
+                            <a onClick={handleLogout} className="btn">Logout</a>
+                        </div>
+                        : <Link to={"/login"} className="btn">Login</Link>
+                }
+
             </div>
         </div>
     );
