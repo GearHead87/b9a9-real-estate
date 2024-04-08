@@ -13,7 +13,7 @@
             "Gym",
             "Balcony"
         ],
-        "image": "https://example.com/apartment_image.jpg"
+        "image": "https://i.ibb.co/RBgJwyC/image.png"
     },
     {
         "id": 2,
@@ -29,7 +29,7 @@
             "Fireplace",
             "Garage"
         ],
-        "image": "https://example.com/townhouse_image.jpg"
+        "image": "https://i.ibb.co/cDgDsJH/image.png"
     },
     {
         "id": 3,
@@ -45,7 +45,7 @@
             "Three bedrooms",
             "Garage"
         ],
-        "image": "https://example.com/home_image.jpg"
+        "image": "https://i.ibb.co/GMb6Z0q/image.png"
     },
     {
         "id": 4,
@@ -61,7 +61,7 @@
             "Fitness center",
             "Restaurant"
         ],
-        "image": "https://example.com/senior_living_image.jpg"
+        "image": "https://i.ibb.co/47bV9Qr/image.png"
     },
     {
         "id": 5,
@@ -77,7 +77,7 @@
             "Study rooms",
             "Laundry facilities"
         ],
-        "image": "https://example.com/student_housing_image.jpg"
+        "image": "https://i.ibb.co/MZNSXwg/image.png"
     },
     {
         "id": 6,
@@ -93,7 +93,7 @@
             "Ocean-view terrace",
             "BBQ area"
         ],
-        "image": "https://example.com/vacation_rental_image.jpg"
+        "image": "https://i.ibb.co/dMsRzB4/image.png"
     },
     {
         "id": 7,
@@ -109,7 +109,7 @@
             "Roof deck",
             "Valet parking"
         ],
-        "image": "https://example.com/condo_image.jpg"
+        "image": "https://i.ibb.co/YTWpwMB/image.png"
     },
     {
         "id": 8,
@@ -125,7 +125,7 @@
             "Fire pit",
             "Hiking trails"
         ],
-        "image": "https://example.com/cabin_image.jpg"
+        "image": "https://i.ibb.co/1LVKL7m/image.png"
     },
     {
         "id": 9,
@@ -141,6 +141,6 @@
             "City views",
             "Walking distance to amenities"
         ],
-        "image": "https://example.com/studio_apartment_image.jpg"
+        "image": "https://i.ibb.co/5j8HRm5/image.png"
     }
 ]
