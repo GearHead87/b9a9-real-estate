@@ -32,7 +32,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <Link to={"/"} className="btn btn-ghost text-xl">daisyUI</Link>
+                <Link to={"/"} className="btn btn-ghost text-xl">UrbanDwell</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -43,7 +43,7 @@ const Navbar = () => {
                 {
                     user
                         ? <div>
-                            <div className="tooltip tooltip-bottom mr-4" data-tip={user.displayName}>
+                            <div className="tooltip tooltip-bottom mr-4" data-tip={user?.displayName}>
                                 <img src={isUrl(user?.photoURL) ? user?.photoURL : "https://i.ibb.co/XDrnjqc/image.png"} className="btn rounded-box"></img>
                             </div>
                             <a onClick={handleLogout} className="btn">Logout</a>

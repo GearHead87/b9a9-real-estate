@@ -5,7 +5,7 @@ import { Toaster } from 'react-hot-toast';
 
 const Root = () => {
     return (
-        <div>
+        <div className='max-w-screen-xl mx-auto'>
             <Toaster></Toaster>
             <Navbar></Navbar>
             <Outlet></Outlet>

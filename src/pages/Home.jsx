@@ -1,9 +1,15 @@
+import { useLoaderData } from "react-router-dom";
+import Estates from "../components/Estates";
+import Slider from "../components/Slider";
 
 const Home = () => {
+    const properties = useLoaderData();
     return (
         <div>
-            <h2>this is home</h2>
-            
+            <Slider></Slider>
+            <Estates
+                properties = {properties}
+            ></Estates>
         </div>
     );
 };

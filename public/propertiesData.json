@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Modern Apartment in Downtown",
+        "segment_name": "Apartment",
+        "description": "A stylish and modern apartment located in the heart of downtown.",
+        "price": "$300,000",
+        "status": "sale",
+        "area": "1200 sq ft",
+        "location": "City Center, New York",
+        "facilities": [
+            "Living room",
+            "Gym",
+            "Balcony"
+        ],
+        "image": "https://example.com/apartment_image.jpg"
+    },
+    {
+        "id": 2,
+        "estate_title": "Cozy Townhouse with Garden",
+        "segment_name": "Townhouse",
+        "description": "Charming townhouse with a private garden and spacious interiors.",
+        "price": "$500,000",
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "Suburbia Lane, Chicago",
+        "facilities": [
+            "Garden",
+            "Fireplace",
+            "Garage"
+        ],
+        "image": "https://example.com/townhouse_image.jpg"
+    },
+    {
+        "id": 3,
+        "estate_title": "Family Home in a Quiet Neighborhood",
+        "segment_name": "Single-family Home",
+        "description": "A lovely single-family home perfect for families seeking tranquility.",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "2200 sq ft",
+        "location": "Oak Street, Seattle",
+        "facilities": [
+            "Spacious backyard",
+            "Three bedrooms",
+            "Garage"
+        ],
+        "image": "https://example.com/home_image.jpg"
+    },
+    {
+        "id": 4,
+        "estate_title": "Luxury Senior Living Community",
+        "segment_name": "Senior Living",
+        "description": "Upscale senior living community with resort-like amenities and services.",
+        "price": "$3,000/month",
+        "status": "rent",
+        "area": "Studio apartment",
+        "location": "Lakeview Estates, Florida",
+        "facilities": [
+            "Swimming pool",
+            "Fitness center",
+            "Restaurant"
+        ],
+        "image": "https://example.com/senior_living_image.jpg"
+    },
+    {
+        "id": 5,
+        "estate_title": "Student Housing Near Campus",
+        "segment_name": "Student Housing",
+        "description": "Convenient student housing just steps away from the university campus.",
+        "price": "$1,200/month",
+        "status": "rent",
+        "area": "Shared apartment",
+        "location": "University Avenue, Boston",
+        "facilities": [
+            "Fully furnished",
+            "Study rooms",
+            "Laundry facilities"
+        ],
+        "image": "https://example.com/student_housing_image.jpg"
+    },
+    {
+        "id": 6,
+        "estate_title": "Beachfront Vacation Rental",
+        "segment_name": "Vacation Rental",
+        "description": "Relaxing beachfront vacation rental with stunning ocean views.",
+        "price": "$250/night",
+        "status": "rent",
+        "area": "1200 sq ft",
+        "location": "Ocean Drive, California",
+        "facilities": [
+            "Private beach access",
+            "Ocean-view terrace",
+            "BBQ area"
+        ],
+        "image": "https://example.com/vacation_rental_image.jpg"
+    },
+    {
+        "id": 7,
+        "estate_title": "Spacious Condo with City Views",
+        "segment_name": "Condo",
+        "description": "Luxurious condo with panoramic city views and modern amenities.",
+        "price": "$700,000",
+        "status": "sale",
+        "area": "1600 sq ft",
+        "location": "Highrise Towers, San Francisco",
+        "facilities": [
+            "Open kitchen",
+            "Roof deck",
+            "Valet parking"
+        ],
+        "image": "https://example.com/condo_image.jpg"
+    },
+    {
+        "id": 8,
+        "estate_title": "Lakefront Cabin Retreat",
+        "segment_name": "Vacation Rental",
+        "description": "Secluded lakefront cabin for a peaceful getaway in nature.",
+        "price": "$300/night",
+        "status": "rent",
+        "area": "800 sq ft",
+        "location": "Lakeview Trail, Colorado",
+        "facilities": [
+            "Private dock",
+            "Fire pit",
+            "Hiking trails"
+        ],
+        "image": "https://example.com/cabin_image.jpg"
+    },
+    {
+        "id": 9,
+        "estate_title": "Downtown Studio Apartment",
+        "segment_name": "Apartment",
+        "description": "Compact studio apartment in the bustling downtown area.",
+        "price": "$1,500/month",
+        "status": "rent",
+        "area": "500 sq ft",
+        "location": "Main Street, Los Angeles",
+        "facilities": [
+            "Modern kitchen",
+            "City views",
+            "Walking distance to amenities"
+        ],
+        "image": "https://example.com/studio_apartment_image.jpg"
+    }
+]
