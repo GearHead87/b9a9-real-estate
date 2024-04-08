@@ -2,7 +2,6 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const PropertyCard = ({ property }) => {
-    console.log(property)
     const { id, estate_title, segment_name, description, price, status, area, location, facilities, image } = property
     return (
         <div>

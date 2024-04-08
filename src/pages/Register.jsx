@@ -2,11 +2,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const [error, setError] = useState(null);
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
+
 
     const handleRegister = e => {
         e.preventDefault();
@@ -16,19 +20,22 @@ const Register = () => {
         const email = form.get("email");
         const password = form.get("password");
         setError(null);
-        
+
         const hasLowerCase = /[a-z]/.test(password);
         const hasUpperCase = /[A-Z]/.test(password);
         if (!hasLowerCase) {
             setError("Password must contain at least one lowercase letter.");
+            toast.error("Password must contain at least one lowercase letter.");
             return;
         }
         if (!hasUpperCase) {
             setError("Password must contain at least one uppercase letter.");
+            toast.error("Password must contain at least one uppercase letter.");
             return;
         }
         if (password.length < 6) {
             setError("Password must be at least 6 characters long.");
+            toast.error("Password must be at least 6 characters long.");
             return;
         }
 
@@ -49,11 +56,15 @@ const Register = () => {
             .catch((error) => {
                 console.log(error);
                 setError(error.message);
+                toast.error(error.message);
             })
 
     }
     return (
         <div>
+            <Helmet>
+                <title>Register</title>
+            </Helmet>
             <div className="max-w-sm mx-auto border-2 p-10 rounded-2xl mt-10">
                 <form onSubmit={handleRegister}>
                     <div className="mb-5">
@@ -68,9 +79,17 @@ const Register = () => {
                         <label className="block mb-2 text-sm font-medium text-gray-900 ">Photo URL</label>
                         <input type="text" name="photo-url" id="photo-url" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Last Name" required />
                     </div>
-                    <div className="mb-5">
+                    <div className="mb-5 relative">
                         <label className="block mb-2 text-sm font-medium text-gray-900 ">Your Password</label>
-                        <input type="password" name="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Password" required />
+                        <input
+                            type={showPassword ? "text" : "password"}
+                            name="password"
+                            id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Password" required />
+                        <span className="absolute top-[60%] right-5" onClick={() => setShowPassword(!showPassword)}>
+                            {
+                                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                            }
+                        </span>
                     </div>
                     <div className="flex items-start mb-5">
                         <div className="flex items-center h-5">

@@ -7,6 +7,7 @@ import { AuthContext } from '../provider/AuthProvider';
 
 const Root = () => {
     const { loading } = useContext(AuthContext);
+
     if (loading) {
         return <>
             <div className="flex items-center justify-center mt-[20vh]">
@@ -16,6 +17,7 @@ const Root = () => {
             </div>
         </>
     }
+
     return (
         <div className='max-w-screen-xl mx-auto'>
             <Toaster></Toaster>

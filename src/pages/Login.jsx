@@ -2,9 +2,14 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 
 const Login = () => {
     const { loginUser, googleLoginUser, githubLoginUser } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
     const [error, setError] = useState(null);
@@ -24,6 +29,7 @@ const Login = () => {
             .catch((error) => {
                 console.log(error);
                 setError(error.message);
+                toast.error(`${error.message}`)
             })
     };
 
@@ -54,15 +60,26 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Login</title>
+            </Helmet>
             <div className="max-w-sm mx-auto border-2 p-10 rounded-2xl mt-10">
                 <form onSubmit={handleFormLogin}>
                     <div className="mb-5">
-                        <label className="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
+                        <label className="block mb-2 text-sm font-medium text-gray-900 ">Your Email</label>
                         <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Email" required />
                     </div>
-                    <div className="mb-5">
-                        <label className="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>
-                        <input type="password" name="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Password" required />
+                    <div className="mb-5 relative">
+                        <label className="block mb-2 text-sm font-medium text-gray-900 ">Your Password</label>
+                        <input
+                            type={showPassword ? "text" : "password"}
+                            name="password"
+                            id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Password" required />
+                        <span className="absolute top-[60%] right-5" onClick={() => setShowPassword(!showPassword)}>
+                            {
+                                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                            }
+                        </span>
                     </div>
                     <div className="flex items-start mb-5">
                         <div className="flex items-center h-5">

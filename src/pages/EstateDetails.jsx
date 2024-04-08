@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { IoMdResize } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
+import { Helmet } from "react-helmet";
 
 const EstateDetails = () => {
     const properties = useLoaderData();
@@ -9,6 +10,9 @@ const EstateDetails = () => {
     const { id, estate_title, segment_name, description, price, status, area, location, facilities, image } = property
     return (
         <div>
+            <Helmet>
+                <title>{estate_title}</title>
+            </Helmet>
             <div className="flex flex-col items-center mt-10 bg-white border border-gray-200 rounded-lg shadow md:flex-row">
                 <img className="object-cover w-full rounded-t-lg m-4 h-96 md:h-auto md:w-96 md:rounded-none md:rounded-s-lg" src={image} />
                 <div className="flex flex-col justify-between p-4 leading-normal">
