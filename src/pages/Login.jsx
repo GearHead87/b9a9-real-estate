@@ -24,6 +24,7 @@ const Login = () => {
         loginUser(email, password)
             .then((result) => {
                 console.log(result.user);
+                toast.success(`Successfully Login user: ${result.user.displayName}`)
                 navigate(location?.state ? location.state : "/");
             })
             .catch((error) => {
@@ -31,25 +32,27 @@ const Login = () => {
                 setError(error.message);
                 toast.error(`${error.message}`)
             })
-    };
-
-    const handleGoogleLogin = () => {
-        setError(null);
-        googleLoginUser()
+        };
+        
+        const handleGoogleLogin = () => {
+            setError(null);
+            googleLoginUser()
             .then((result) => {
                 console.log(result.user)
+                toast.success(`Successfully Login user: ${result.user.displayName}`)
                 navigate(location?.state ? location.state : "/");
             })
             .catch((error) => {
                 console.log(error)
                 setError(error.message);
             })
-    }
-    const handleGithubLogin = () => {
-        setError(null);
-        githubLoginUser()
+        }
+        const handleGithubLogin = () => {
+            setError(null);
+            githubLoginUser()
             .then((result) => {
                 console.log(result.user)
+                toast.success(`Successfully Login user: ${result.user.displayName}`)
                 navigate(location?.state ? location.state : "/");
             })
             .catch((error) => {
@@ -87,14 +90,14 @@ const Login = () => {
                         </div>
                         <label className="ms-2 text-sm font-medium text-gray-900 ">Remember me</label>
                     </div>
-                    <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Submit</button>
+                    <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Login</button>
                 </form>
                 <div>
                     <div onClick={handleGoogleLogin} className="btn my-5 text-sm font-medium rounded-lg text-gray-900 w-full bg-gray-50 border border-gray-300">
                         <p className="flex items-center justify-center gap-4"><FaGoogle></FaGoogle>Login with Google</p>
                     </div>
                     <div onClick={handleGithubLogin} className="btn my-2 text-sm font-medium rounded-lg text-gray-900 w-full bg-gray-50 border border-gray-300">
-                        <p className="flex items-center justify-center gap-4"><FaGithub></FaGithub>Login with Google</p>
+                        <p className="flex items-center justify-center gap-4"><FaGithub></FaGithub>Login with Github</p>
                     </div>
 
                 </div>

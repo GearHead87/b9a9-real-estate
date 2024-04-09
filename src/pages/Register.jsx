@@ -97,7 +97,7 @@ const Register = () => {
                         </div>
                         <label className="ms-2 text-sm font-medium text-gray-900 ">Remember me</label>
                     </div>
-                    <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Submit</button>
+                    <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Register</button>
                 </form>
                 {error
                     ? <h2 className="text-red-600 mt-4">{error}</h2>
