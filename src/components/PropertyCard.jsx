@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import PropTypes from 'prop-types';
 
 
 const PropertyCard = ({ property }) => {
@@ -48,3 +49,7 @@ const PropertyCard = ({ property }) => {
 };
 
 export default PropertyCard;
+
+PropertyCard.propTypes = {
+    property: PropTypes.object,
+}

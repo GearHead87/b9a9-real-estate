@@ -7,7 +7,7 @@ const EstateDetails = () => {
     const properties = useLoaderData();
     const propertyID = parseInt(useParams().id);
     const property = properties.find((p) => p.id === propertyID);
-    const { id, estate_title, segment_name, description, price, status, area, location, facilities, image } = property
+    const { estate_title, segment_name, description, price, status, area, location, facilities, image } = property
     return (
         <div>
             <Helmet>

@@ -1,4 +1,5 @@
 import PropertyCard from "./PropertyCard";
+import PropTypes from 'prop-types';
 
 const Estates = ({ properties }) => {
     return (
@@ -20,3 +21,7 @@ const Estates = ({ properties }) => {
 };
 
 export default Estates;
+
+Estates.propTypes = {
+    properties: PropTypes.array,
+}
