@@ -19,6 +19,12 @@ This project is for Programming Hero Course Batch 9 Assignment 9
 
 - Contact and Inquiry: Easily get in touch with our team using the provided contact information or submit inquiries through the contact form.
 
+## Packages Used in this Project
+- AOS Package
+- Animate.css
+- Swiper slider
+- check-valid-url (To validate a profile URL, if the user doesn't provide a valid URL, a default picture will be shown.)
+- react-hot-toast
 
 ## Deployment
 
