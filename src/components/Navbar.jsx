@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { isUrl } from "check-valid-url";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -10,6 +11,7 @@ const Navbar = () => {
         logOut()
             .then()
             .catch()
+        toast.success(`Successfully Logout`);
     }
     const navLinks = <>
         <li><NavLink to={"/"}>Home</NavLink></li>
